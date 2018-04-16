@@ -1,8 +1,8 @@
 #######################################
 #
 # Decision Making on Promotion Strategy for Maru Batting Center
-#
 # based on Customer Lifetime Value
+# A first small smart attempt!
 #
 #######################################
 
@@ -206,10 +206,8 @@ elite.ballplayers.discount$npv.cum.profit[npv.annual.profit.large.enough.EBpromo
 # 2. for each "ACQUIARED" customer, a free bat is to be given, which increases the acquisition cost
 response.rate[4] = 0.29
 acquisition.cost = contact.cost / response.rate
-
 # add the bat cost to the acquisition cost (only for this segment)
 acquisition.cost[4] = acquisition.cost[4] + 10000
-
 # set the parameters used in aforementioned proposal back to the original value
 hourly.price.charged[4] = 7500
 hourly.margin = hourly.price.charged-total.cost.per.hour
@@ -219,6 +217,7 @@ retention.rate[4] = 0.60
 
 elite.ballplayers.bat = calc.CLV(4)
 round(elite.ballplayers.bat$npv.annual.profit,3)
+
 # make decision!
 npv.annual.profit.large.enough.EBbat = which(elite.ballplayers.bat$npv.annual.profit>=100)
 last.index.EBbat = length(npv.annual.profit.large.enough.EBbat)
