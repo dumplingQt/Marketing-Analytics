@@ -9,4 +9,4 @@
 
 ##### Working file
 
-[Maru Batting Center](/Maru Batting Center.R)
+[Maru Batting Center](https://github.com/dumplingQt/Marketing-Analytics/blob/master/Maru%20Batting%20Center.R)
